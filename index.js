@@ -49,10 +49,8 @@ function onCardClicked(e) {
     target.className += ' done';
 
     if (!clickedCard) {
-        // if we haven't clicked a card, keep track of the card, display it's color
         clickedCard = target;
     } else if (clickedCard) {
-        // if we have already clicked a card, check if the new card matches the old card color
         movesMade++;
         document.getElementById("moves").innerHTML = movesMade;
         if (
