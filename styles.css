@@ -1,0 +1,133 @@
+.concentration-row {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
+.concentration-card {
+    margin: 3px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0;
+    height: auto;
+    cursor: pointer;
+}
+
+.concentration-card.done {
+    cursor: default;
+}
+
+.concentration-card.done:hover {
+    cursor: default;
+    box-shadow: none;
+}
+
+.scene {
+    max-width: 300px;
+    height: calc(25vh - 35px);
+    perspective: 600px;
+    display: inline-block;
+}
+
+.done>.card-sides {
+    transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card-sides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 0.5s;
+}
+
+.card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    backface-visibility: hidden;
+}
+
+.card__face--front {
+    background: #e1e1e1;
+}
+
+.card__face--front:hover {
+    box-shadow: inset 0 0 0 1px red;
+    box-sizing: border-box;
+}
+
+.card__face--back {
+    transform: rotateY(180deg);
+}
+
+.blue>.card-sides>.card__face--back {
+    background-color: blue;
+}
+
+.green>.card-sides>.card__face--back {
+    background-color: green;
+}
+
+.brown>.card-sides>.card__face--back {
+    background-color: brown;
+}
+
+.red>.card-sides>.card__face--back {
+    background-color: red;
+}
+
+.pink>.card-sides>.card__face--back {
+    background-color: pink;
+}
+
+.purple>.card-sides>.card__face--back {
+    background-color: purple;
+}
+
+.orange>.card-sides>.card__face--back {
+    background-color: orange;
+}
+
+.aqua>.card-sides>.card__face--back {
+    background-color: aqua;
+}
+
+.color-hidden {
+    background-color: #e1e1e1;
+}
+
+/*<---------------------->*/
+/*global style*/
+/*<---------------------->*/
+main {
+    padding-top: 56px;
+    min-height: calc(100vh - 56px);
+}
+
+.versions-text {
+    font-size: 10px;
+}
+
+.end-screen {
+    z-index: 1;
+    background-color: rgba(0, 152, 0, 0.4);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.end-screen-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.pt-10vh {
+    padding-top: 10vh;
+}
